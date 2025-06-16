@@ -1,0 +1,295 @@
+import { motion } from 'framer-motion'
+import { Code, Server, Database, Globe, Brain, Users } from 'lucide-react'
+
+const About = () => {
+  const skills = [
+    {
+      category: 'Frontend',
+      icon: Globe,
+      technologies: ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'Bootstrap', 'Bulma', 'Handlebars', 'HTML', 'CSS']
+    },
+    {
+      category: 'Backend',
+      icon: Server,
+      technologies: ['Node.js', 'Express', 'C#', '.NET', 'Python', 'GraphQL', 'REST']
+    },
+    {
+      category: 'Databases',
+      icon: Database,
+      technologies: ['SQL Server', 'PostgreSQL', 'MongoDB', 'MySQL', 'SQLite']
+    },
+    {
+      category: 'Tools & Others',
+      icon: Code,
+      technologies: ['Git', 'Docker', 'AWS', 'Azure', 'Render', 'Jest', 'Netlify']
+    }
+  ]
+
+  const experience = [
+    {
+      year: '2025',
+      title: 'Software Engineer',
+      company: 'Silencer Shop',
+      description: "Software engineer responsible for maintaining and scaling legacy applications under a highly regulated industry as customer demand constantly increases. Collaborated with Sales, Compliance and Marketing teams to improve business facing applications as well as e-commerce web applications. Employed Agile-Web development strategies in tandem with senior engineers within their implemented CI/CD pipelines.",
+    },
+    {
+      year: '2024',
+      title: 'Full Stack Developer',
+      company: 'Freelance',
+      description: "Software developer responsible for designing, building, and configuring applications to meet business requirements and platform design specifications. Strong experience in Object Oriented Design principles, applying software design patterns, working with stakeholders and end users to build solutions for Non-profit and For-Profit Organizations. Developed Proof-of-Concept projects to validate new architectures and solutions for planning and refactoring existing code base.",
+    },
+    {
+      year: '2020',
+      title: 'Secondary Instructor',
+      company: 'Austin ISD / Hays CISD',
+      description: "Responsibilities included instructing Advanced Placement and Academic Social Studies courses, creating and monitoring course credit recovery activities, and actively collaborating in Professional Learning Committee activities. Coaching responsibilities included coaching wide receivers, analyzing team statistics, managing video databases and team application utilization metrics. Produced team highlights weekly and individual highlights periodically for athletes.",
+    }
+  ]
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.2
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  }
+
+  return (
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      className="min-h-screen"
+    >
+      {/* Hero Section */}
+      <section className="section-padding">
+        <div className="max-w-7xl mx-auto container-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div variants={itemVariants}>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                About <span className="gradient-text">Me</span>
+              </h1>
+              
+              <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300">
+                <p>
+                  I'm a passionate full-stack developer with over 2 years of experience 
+                  creating digital solutions that make a difference. My journey into 
+                  programming started with curiosity and has evolved into a deep love 
+                  for building scalable, user-friendly applications.
+                </p>
+                
+                <p>
+                  When I'm not coding, you'll find me exploring new technologies, 
+                  contributing to open-source projects, or mentoring aspiring developers. 
+                  I believe in the power of clean code, continuous learning, and 
+                  collaborative problem-solving.
+                </p>
+                
+                <p>
+                  My goal is to create applications that not only solve real-world 
+                  problems but also provide exceptional user experiences. I'm always 
+                  excited to take on new challenges and learn emerging technologies.
+                </p>
+              </div>
+
+              <div className="mt-8 grid grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">20+</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">2+</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">15+</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Technologies</div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="relative">
+              <div className="aspect-square max-w-md mx-auto">
+                <div className="w-full h-full bg-gradient-to-br from-primary-400 to-accent-400 rounded-2xl p-8 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <div className="text-6xl mb-4">👨‍💻</div>
+                    <h3 className="text-xl font-semibold">Always Learning</h3>
+                    <p className="mt-2 opacity-90">Passionate about technology and innovation</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="section-padding bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto container-padding">
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Skills & <span className="gradient-text">Expertise</span>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Technologies and tools I work with to bring ideas to life
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {skills.map((skill) => {
+              const Icon = skill.icon
+              return (
+                <motion.div
+                  key={skill.category}
+                  variants={itemVariants}
+                  className="bg-gray-50 dark:bg-gray-900 p-6 rounded-xl card-hover"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 bg-primary-100 dark:bg-primary-900/30 rounded-lg mr-3">
+                      <Icon className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+                      {skill.category}
+                    </h3>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    {skill.technologies.map((tech) => (
+                      <div
+                        key={tech}
+                        className="bg-white dark:bg-gray-800 px-3 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700"
+                      >
+                        {tech}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Timeline */}
+      <section className="section-padding">
+        <div className="max-w-4xl mx-auto container-padding">
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              My <span className="gradient-text">Journey</span>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400">
+              A timeline of my professional growth and experiences
+            </p>
+          </motion.div>
+
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-400 to-accent-400"></div>
+
+            <div className="space-y-12">
+              {experience.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="relative flex items-start"
+                >
+                  {/* Timeline dot */}
+                  <div className="absolute left-6 w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-gray-900 z-10"></div>
+                  
+                  <div className="ml-20">
+                    <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg card-hover">
+                      <div className="flex items-center mb-2">
+                        <span className="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-3 py-1 rounded-full text-sm font-medium">
+                          {item.year}
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                        {item.title}
+                      </h3>
+                      
+                      <p className="text-primary-600 dark:text-primary-400 font-medium mb-3">
+                        {item.company}
+                      </p>
+                      
+                      <p className="text-gray-600 dark:text-gray-400">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Personal Interests */}
+      <section className="section-padding bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto container-padding">
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Beyond <span className="gradient-text">Code</span>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              What drives me outside of programming
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div variants={itemVariants} className="text-center">
+              <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-8 h-8 text-primary-600 dark:text-primary-400" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
+                Continuous Learning
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Always exploring new technologies, attending conferences, and staying up-to-date with industry trends.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="text-center">
+              <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-primary-600 dark:text-primary-400" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
+                Community Building
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Mentoring new developers, contributing to open source, and participating in local tech meetups.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="text-center">
+              <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Code className="w-8 h-8 text-primary-600 dark:text-primary-400" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
+                Side Projects
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Building fun applications, experimenting with new frameworks, and turning ideas into reality.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </motion.div>
+  )
+}
+
+export default About 
