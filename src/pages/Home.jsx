@@ -34,8 +34,8 @@ const Home = () => {
       exit="hidden"
     >
       {/* Hero Section */}
-      <section className="section-padding min-h-screen flex items-center">
-        <div className="max-w-7xl mx-auto container-padding">
+      <section className="section-padding min-h-screen flex items-center overflow-hidden">
+        <div className="max-w-7xl mx-auto container-padding w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div variants={itemVariants} className="text-center lg:text-left">
               <motion.div
@@ -85,10 +85,10 @@ const Home = () => {
 
             <motion.div
               variants={itemVariants}
-              className="relative"
+              className="relative overflow-hidden"
             >
               {/* Modern geometric design */}
-              <div className="relative max-w-md mx-auto">
+              <div className="relative max-w-md mx-auto px-4 sm:px-0">
                 {/* Main container */}
                 <div className="relative bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/20 dark:to-accent-900/20 rounded-2xl p-8 shadow-2xl">
                   {/* Grid pattern background */}
@@ -127,7 +127,7 @@ const Home = () => {
                         <span className="text-primary-600 dark:text-primary-400">const</span>
                         <span className="text-gray-700 dark:text-gray-300">skills</span>
                         <span className="text-gray-500">=</span>
-                        <span className="text-accent-600 dark:text-accent-400">['React', 'Node', 'C#', .NET]</span>
+                        <span className="text-accent-600 dark:text-accent-400">['React', 'Node', 'C#', '.NET', 'etc.']</span>
                       </div>
                       
                       <div className="flex items-center gap-2">
@@ -141,17 +141,17 @@ const Home = () => {
                 </div>
                 
                 {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary-300 to-primary-400 rounded-full opacity-60 blur-xl"></div>
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-primary-400 to-primary-300 rounded-full opacity-40 blur-2xl"></div>
+                <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-br from-primary-300 to-primary-400 rounded-full opacity-60 blur-xl"></div>
+                <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-20 h-20 sm:w-32 sm:h-32 bg-gradient-to-tr from-primary-400 to-primary-300 rounded-full opacity-40 blur-2xl"></div>
                 
                 {/* Tech stack indicators */}
-                <div className="absolute top-8 -left-8 bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg">
+                <div className="hidden sm:block absolute top-8 -left-4 lg:-left-8 bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg">
                   <div className="w-8 h-8 bg-gradient-to-br from-primary-400 to-primary-600 rounded-md flex items-center justify-center">
                     <span className="text-white font-bold text-sm">JS</span>
                   </div>
                 </div>
                 
-                <div className="absolute bottom-8 -right-8 bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg">
+                <div className="hidden sm:block absolute bottom-8 -right-4 lg:-right-8 bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg">
                   <div className="w-8 h-8 bg-gradient-to-br from-accent-400 to-accent-600 rounded-md flex items-center justify-center">
                     <span className="text-white font-bold text-sm">⚛</span>
                   </div>

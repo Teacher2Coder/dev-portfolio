@@ -140,11 +140,10 @@ const Resume = () => {
               Professional Summary
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Passionate and experienced Full Stack Developer with 3+ years of expertise in building 
-              scalable web applications using modern technologies. Proven track record of delivering 
-              high-quality solutions, leading development teams, and implementing best practices. 
-              Strong background in React, Node.js, and cloud technologies with a focus on user 
-              experience and performance optimization.
+            Result Oriented, Full-Stack Software Developer with a track record of leading teams during quick turnaround projects with a collaborative approach and focus on quality. 
+            Self-starter with a strong emphasis on leveraging front end and back end technologies to deliver measurable business results while navigating through constant changes in the application development lifecycle. 
+            High energy, driven individual with a ‘roll-up-your-sleeves’ approach to delivering high quality, responsive, and scalable full-stack applications. 
+            Proven competency in Agile Development Methodology Framework with solid business understanding and a unique ability for finding creative solutions when options are limited.
             </p>
           </div>
         </motion.div>

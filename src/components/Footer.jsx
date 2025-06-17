@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Twitter, Heart } from 'lucide-react'
+import { Github, Linkedin, Twitter, Heart } from 'lucide-react'
 
 const Footer = () => {
   const socialLinks = [
@@ -17,11 +17,6 @@ const Footer = () => {
       icon: Twitter,
       href: 'https://twitter.com/Coach_E83',
       label: 'Twitter'
-    },
-    {
-      icon: Mail,
-      href: 'mailto:ethan.owens4@gmail.com',
-      label: 'Email'
     }
   ]
 
