@@ -194,7 +194,7 @@ const Portfolio = () => {
                   {/* Links */}
                   <div className="flex gap-4">
                     <Link
-                      to={`/project/${project.id}`}
+                      to={`/project/${project.name}`}
                       className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
                     >
                       <Eye className="w-4 h-4" />

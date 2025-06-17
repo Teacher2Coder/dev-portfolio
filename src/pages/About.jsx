@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Code, Server, Database, Globe, Brain, Users } from 'lucide-react'
+import experience from '../data/experience.json'
 
 const About = () => {
   const skills = [
@@ -22,27 +23,6 @@ const About = () => {
       category: 'Tools & Others',
       icon: Code,
       technologies: ['Git', 'Docker', 'AWS', 'Azure', 'Render', 'Jest', 'Netlify']
-    }
-  ]
-
-  const experience = [
-    {
-      year: '2025',
-      title: 'Software Engineer',
-      company: 'Silencer Shop',
-      description: "Software engineer responsible for maintaining and scaling legacy applications under a highly regulated industry as customer demand constantly increases. Collaborated with Sales, Compliance and Marketing teams to improve business facing applications as well as e-commerce web applications. Employed Agile-Web development strategies in tandem with senior engineers within their implemented CI/CD pipelines.",
-    },
-    {
-      year: '2024',
-      title: 'Full Stack Developer',
-      company: 'Freelance',
-      description: "Software developer responsible for designing, building, and configuring applications to meet business requirements and platform design specifications. Strong experience in Object Oriented Design principles, applying software design patterns, working with stakeholders and end users to build solutions for Non-profit and For-Profit Organizations. Developed Proof-of-Concept projects to validate new architectures and solutions for planning and refactoring existing code base.",
-    },
-    {
-      year: '2020',
-      title: 'Secondary Instructor',
-      company: 'Austin ISD / Hays CISD',
-      description: "Responsibilities included instructing Advanced Placement and Academic Social Studies courses, creating and monitoring course credit recovery activities, and actively collaborating in Professional Learning Committee activities. Coaching responsibilities included coaching wide receivers, analyzing team statistics, managing video databases and team application utilization metrics. Produced team highlights weekly and individual highlights periodically for athletes.",
     }
   ]
 
@@ -115,7 +95,7 @@ const About = () => {
                   <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">15+</div>
+                  <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">20+</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">Technologies</div>
                 </div>
               </div>
@@ -213,7 +193,7 @@ const About = () => {
                     <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg card-hover">
                       <div className="flex items-center mb-2">
                         <span className="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 px-3 py-1 rounded-full text-sm font-medium">
-                          {item.year}
+                          {item.period}
                         </span>
                       </div>
                       

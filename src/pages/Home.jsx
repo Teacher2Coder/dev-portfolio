@@ -62,7 +62,7 @@ const Home = () => {
               </p>
               
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-2xl">
-                With expertise in React, Node.js, and modern web technologies, 
+                With expertise in React, Node.js, .NET, and other modern web technologies, 
                 I bring ideas to life through clean code and innovative solutions.
               </p>
               
@@ -109,32 +109,58 @@ const Home = () => {
                   
                   {/* Code-like elements */}
                   <div className="relative z-10 space-y-4">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 justify-end">
                       <div className="w-3 h-3 bg-red-400 rounded-full"></div>
                       <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                       <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                     </div>
                     
-                    <div className="space-y-3 font-mono text-sm">
+                    <div className="space-y-2 font-mono text-sm max-w-fit mx-auto pl-8">
                       <div className="flex items-center gap-2">
-                        <span className="text-primary-600 dark:text-primary-400">const</span>
-                        <span className="text-gray-700 dark:text-gray-300">developer</span>
-                        <span className="text-gray-500">=</span>
-                        <span className="text-accent-600 dark:text-accent-400">'Ethan Owens'</span>
+                        <span className="text-primary-600 dark:text-primary-400">while</span>
+                        <span className="text-gray-700 dark:text-gray-300">(alive)</span>
                       </div>
                       
-                      <div className="flex items-center gap-2">
-                        <span className="text-primary-600 dark:text-primary-400">const</span>
-                        <span className="text-gray-700 dark:text-gray-300">skills</span>
-                        <span className="text-gray-500">=</span>
-                        <span className="text-accent-600 dark:text-accent-400">['React', 'Node', 'C#', '.NET', 'etc.']</span>
+                      <div className="text-gray-700 dark:text-gray-300">
+                        <span>{'{'}</span>
                       </div>
                       
-                      <div className="flex items-center gap-2">
-                        <span className="text-primary-600 dark:text-primary-400">const</span>
-                        <span className="text-gray-700 dark:text-gray-300">passion</span>
+                      <div className="flex items-center gap-2 ml-4">
+                        <span className="text-primary-600 dark:text-primary-400">var</span>
+                        <span className="text-gray-700 dark:text-gray-300">skill</span>
                         <span className="text-gray-500">=</span>
-                        <span className="text-accent-600 dark:text-accent-400">'Building amazing apps'</span>
+                        <span className="text-accent-600 dark:text-accent-400">Learn()</span>
+                        <span className="text-gray-500">;</span>
+                      </div>
+                      
+                      <div className="flex items-center gap-2 ml-4">
+                        <span className="text-primary-600 dark:text-primary-400">var</span>
+                        <span className="text-gray-700 dark:text-gray-300">project</span>
+                        <span className="text-gray-500">=</span>
+                        <span className="text-accent-600 dark:text-accent-400">Build</span>
+                        <span className="text-gray-700 dark:text-gray-300">(skill)</span>
+                        <span className="text-gray-500">;</span>
+                      </div>
+                      
+                      <div className="flex items-center gap-2 ml-4">
+                        <span className="text-accent-600 dark:text-accent-400">Debug</span>
+                        <span className="text-gray-700 dark:text-gray-300">(project)</span>
+                        <span className="text-gray-500">;</span>
+                      </div>
+                      
+                      <div className="flex items-center gap-2 ml-4">
+                        <span className="text-accent-600 dark:text-accent-400">Deploy</span>
+                        <span className="text-gray-700 dark:text-gray-300">(project)</span>
+                        <span className="text-gray-500">;</span>
+                      </div>
+                      
+                      <div className="flex items-center gap-2 ml-4">
+                        <span className="text-accent-600 dark:text-accent-400">Repeat()</span>
+                        <span className="text-gray-500">;</span>
+                      </div>
+                      
+                      <div className="text-gray-700 dark:text-gray-300">
+                        <span>{'}'}</span>
                       </div>
                     </div>
                   </div>
@@ -153,7 +179,7 @@ const Home = () => {
                 
                 <div className="hidden sm:block absolute bottom-8 -right-4 lg:-right-8 bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg">
                   <div className="w-8 h-8 bg-gradient-to-br from-accent-400 to-accent-600 rounded-md flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">⚛</span>
+                    <span className="text-white font-bold text-xs">.NET</span>
                   </div>
                 </div>
               </div>
@@ -227,7 +253,7 @@ const Home = () => {
                   
                   <div className="flex gap-3">
                     <Link
-                      to={`/project/${project.id}`}
+                      to={`/project/${project.name}`}
                       className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
                     >
                       <Eye className="w-4 h-4" />

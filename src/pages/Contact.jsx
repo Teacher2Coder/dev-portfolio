@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import axios from 'axios'
-import { Send, Mail, MapPin, Phone, Github, Linkedin, Twitter } from 'lucide-react'
+import { Send, Github, Linkedin, Twitter } from 'lucide-react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,17 +19,16 @@ const Contact = () => {
     }))
   }
 
-  const sendEmail = () => {
-    axios
-      .post("https://formsubmit.co/ajax/51a24ea3709ac8afaaa76d16a00b4a9d", {
+  const sendEmail = async () => {
+    try {
+      await axios.post("https://formsubmit.co/ajax/51a24ea3709ac8afaaa76d16a00b4a9d", {
         name: formData.name,
         email: formData.email,
         message: formData.message,
-      })
-      .then((response) => {
-        console.log(response)
-      })
-      .catch((error) => console.log(error));
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -37,9 +36,9 @@ const Contact = () => {
     setIsSubmitting(true)
     
     try {
-      sendEmail();
+      await sendEmail();
       setSubmitStatus('success')
-      setFormData({ name: '', email: '', subject: '', message: '' })
+      setFormData({ name: '', email: '', message: '' })
     } catch (error) {
       setSubmitStatus('error')
       console.error(error);
@@ -50,27 +49,6 @@ const Contact = () => {
     // Clear status after 5 seconds
     setTimeout(() => setSubmitStatus(null), 5000)
   }
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: 'Email',
-      value: 'ethan.owens4@gmail.com',
-      href: 'mailto:ethan.owens4@gmail.com'
-    },
-    {
-      icon: MapPin,
-      label: 'Location',
-      value: 'Austin, TX, United States',
-      href: null
-    },
-    {
-      icon: Phone,
-      label: 'Available for',
-      value: 'Remote Work',
-      href: null
-    }
-  ]
 
   const socialLinks = [
     {
@@ -227,7 +205,7 @@ const Contact = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="p-4 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-300"
                   >
-                    Something went wrong. Please try again or email me directly.
+                    Something went wrong. Please try again later.
                   </motion.div>
                 )}
               </form>

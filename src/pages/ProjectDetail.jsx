@@ -1,22 +1,23 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Github, ExternalLink, Calendar, Code, Tag, CheckCircle, Clock } from 'lucide-react'
+import { ArrowLeft, Github, ExternalLink, Code, Tag, CheckCircle, Clock } from 'lucide-react'
 import projectsData from '../data/projects.json'
 
 const ProjectDetail = () => {
-  const { id } = useParams()
+  const { name } = useParams()
   const navigate = useNavigate()
   const [project, setProject] = useState(null)
 
   useEffect(() => {
-    const foundProject = projectsData.find(p => p.id === parseInt(id))
+    const foundProject = projectsData.find(p => p.name === name)
     if (foundProject) {
       setProject(foundProject)
+      console.log(foundProject)
     } else {
       navigate('/portfolio')
     }
-  }, [id, navigate])
+  }, [name, navigate])
 
   if (!project) {
     return (
@@ -220,7 +221,7 @@ const ProjectDetail = () => {
                   .map((relatedProject) => (
                     <Link
                       key={relatedProject.id}
-                      to={`/project/${relatedProject.id}`}
+                      to={`/project/${relatedProject.name}`}
                       className="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors duration-300"
                     >
                       <div className="font-medium text-gray-900 dark:text-gray-100 text-sm">
