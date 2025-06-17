@@ -26,7 +26,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+    <footer className="bg-white dark:bg-accent-900 border-t border-gray-200 dark:border-accent-700">
       <div className="max-w-7xl mx-auto container-padding py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
@@ -74,7 +74,7 @@ const Footer = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-primary-600 hover:text-white transition-all duration-300"
+                    className="p-3 bg-gray-100 dark:bg-accent-800 rounded-lg hover:bg-primary-600 hover:text-white transition-all duration-300"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: 20 }}
@@ -91,7 +91,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-accent-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0">
               © {new Date().getFullYear()} Ethan Owens. All rights reserved.

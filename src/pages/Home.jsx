@@ -43,7 +43,7 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <span className="bg-gradient-to-r from-primary-100 to-accent-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">
+                <span className="bg-gradient-to-r from-primary-200 to-primary-300 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">
                   👋 Welcome to my portfolio
                 </span>
               </motion.div>
@@ -90,7 +90,7 @@ const Home = () => {
               {/* Modern geometric design */}
               <div className="relative max-w-md mx-auto">
                 {/* Main container */}
-                <div className="relative bg-gradient-to-br from-primary-50 to-accent-50 dark:from-primary-900/20 dark:to-accent-900/20 rounded-2xl p-8 shadow-2xl">
+                <div className="relative bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/20 dark:to-accent-900/20 rounded-2xl p-8 shadow-2xl">
                   {/* Grid pattern background */}
                   <div className="absolute inset-0 opacity-10">
                     <div className="grid grid-cols-8 gap-2 h-full w-full p-4">
@@ -141,8 +141,8 @@ const Home = () => {
                 </div>
                 
                 {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full opacity-60 blur-xl"></div>
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-accent-200 to-primary-200 rounded-full opacity-40 blur-2xl"></div>
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary-300 to-primary-400 rounded-full opacity-60 blur-xl"></div>
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-primary-400 to-primary-300 rounded-full opacity-40 blur-2xl"></div>
                 
                 {/* Tech stack indicators */}
                 <div className="absolute top-8 -left-8 bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg">
