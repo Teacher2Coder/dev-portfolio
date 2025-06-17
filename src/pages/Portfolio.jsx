@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Github, ExternalLink, Filter } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Github, ExternalLink, Filter, Eye } from 'lucide-react'
 import projectsData from '../data/projects.json'
 
 const Portfolio = () => {
@@ -163,9 +164,11 @@ const Portfolio = () => {
 
                 {/* Project Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
-                    {project.title}
-                  </h3>
+                  <Link to={`/project/${project.id}`}>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300 cursor-pointer">
+                      {project.title}
+                    </h3>
+                  </Link>
                   
                   <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
                     {project.description}
@@ -190,6 +193,13 @@ const Portfolio = () => {
 
                   {/* Links */}
                   <div className="flex gap-4">
+                    <Link
+                      to={`/project/${project.id}`}
+                      className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
+                    >
+                      <Eye className="w-4 h-4" />
+                      <span className="text-sm">View Details</span>
+                    </Link>
                     <a
                       href={project.githubUrl}
                       target="_blank"
