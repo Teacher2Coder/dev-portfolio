@@ -1,15 +1,10 @@
 import { motion } from 'framer-motion'
 import { Download, ExternalLink, Calendar, MapPin } from 'lucide-react'
+import SkillsTable from '../components/SkillsTable'
 import experience from '../data/experience.json'
 
 const Resume = () => {
-  const skills = {
-    'Frontend': ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'Bootstrap', 'Bulma', 'Handlebars', 'HTML', 'CSS'],
-    'Backend': ['Node.js', 'Express', 'C#', '.NET', 'Python', 'GraphQL', 'REST'],
-    'Database': ['SQL Server', 'PostgreSQL', 'MongoDB', 'MySQL', 'SQLite'],
-    'Tools & Others': ['Git', 'Docker', 'AWS', 'Azure', 'Render', 'Jest', 'Netlify']
-  }
-
+  
   const education = [
     {
       degree: 'Bachelor of Science in Exercise Physiology',
@@ -72,7 +67,7 @@ const Resume = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/ethan-owens-resume.pdf"
+              href="/E.Owens_Resume.pdf"
               download
               className="btn-primary inline-flex items-center gap-2"
             >
@@ -110,25 +105,7 @@ const Resume = () => {
             Technical <span className="gradient-text">Skills</span>
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {Object.entries(skills).map(([category, skillList]) => (
-              <div key={category} className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold mb-4 text-primary-600 dark:text-primary-400">
-                  {category}
-                </h3>
-                <div className="space-y-2">
-                  {skillList.map((skill) => (
-                    <div
-                      key={skill}
-                      className="bg-gray-100 dark:bg-gray-700 px-3 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-300"
-                    >
-                      {skill}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+          <SkillsTable itemVariants={itemVariants} />
         </motion.div>
 
         {/* Experience */}

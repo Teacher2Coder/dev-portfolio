@@ -1,25 +1,7 @@
-import { motion } from 'framer-motion'
-import { Github, Linkedin, Twitter, Heart } from 'lucide-react'
+import { Heart } from 'lucide-react'
+import ContactIcons from './ContactIcons'
 
 const Footer = () => {
-  const socialLinks = [
-    {
-      icon: Github,
-      href: 'https://github.com/Teacher2Coder',
-      label: 'GitHub'
-    },
-    {
-      icon: Linkedin,
-      href: 'https://linkedin.com/in/ethan-owens-717b16199',
-      label: 'LinkedIn'
-    },
-    {
-      icon: Twitter,
-      href: 'https://twitter.com/Coach_E83',
-      label: 'Twitter'
-    }
-  ]
-
   return (
     <footer className="bg-white dark:bg-accent-900 border-t border-gray-200 dark:border-accent-700">
       <div className="max-w-7xl mx-auto container-padding py-12">
@@ -60,28 +42,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
               Connect With Me
             </h4>
-            <div className="flex justify-center md:justify-end space-x-4">
-              {socialLinks.map((link, index) => {
-                const Icon = link.icon
-                return (
-                  <motion.a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-gray-100 dark:bg-accent-800 rounded-lg hover:bg-primary-600 hover:text-white transition-all duration-300"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <Icon className="w-5 h-5" />
-                    <span className="sr-only">{link.label}</span>
-                  </motion.a>
-                )
-              })}
-            </div>
+            <ContactIcons className="flex justify-center md:justify-end space-x-4" />         
           </div>
         </div>
 
