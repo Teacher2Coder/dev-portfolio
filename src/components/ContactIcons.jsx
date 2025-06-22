@@ -15,7 +15,7 @@ const ContactIcons = ({
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/ethan-owens-717b16199',
+      href: 'https://linkedin.com/in/ethan-robert-owens',
       label: 'LinkedIn'
     },
     {
