@@ -39,7 +39,7 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      await sendEmail();
+      sendEmail();
       setSubmitStatus("success");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
