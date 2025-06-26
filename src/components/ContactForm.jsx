@@ -130,7 +130,6 @@ const ContactForm = () => {
         )}
       </button>
 
-      {/* Status Messages */}
       {submitStatus === "success" && (
         <motion.div
           initial={{ opacity: 0, y: 10 }}

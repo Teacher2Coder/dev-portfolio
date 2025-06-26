@@ -32,7 +32,6 @@ const Contact = () => {
       className="min-h-screen section-padding"
     >
       <div className="max-w-7xl mx-auto container-padding">
-        {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Get In <span className="gradient-text">Touch</span>
@@ -44,7 +43,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <motion.div variants={itemVariants}>
             <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
               <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
@@ -56,9 +54,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Contact Information */}
           <motion.div variants={itemVariants} className="space-y-8">
-            {/* Social Links */}
             <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
               <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-gray-100">
                 Let's Connect
@@ -75,7 +71,6 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* Availability */}
             <div className="bg-gradient-to-r from-primary-600 to-accent-600 p-8 rounded-2xl text-white">
               <h3 className="text-xl font-bold mb-4">
                 Available for Projects

@@ -1,12 +1,13 @@
 import { Heart } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import ContactIcons from './ContactIcons'
+import handleSmoothScroll from '../utils/handleSmoothScroll'
 
 const Footer = () => {
   return (
     <footer className="bg-white dark:bg-accent-900 border-t border-gray-200 dark:border-accent-700">
       <div className="max-w-7xl mx-auto container-padding py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand */}
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold gradient-text mb-4">
               Ethan Owens
@@ -16,28 +17,42 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div className="text-center">
             <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
               Quick Links
             </h4>
             <div className="space-y-2">
-              <a href="/about" className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">
+              <Link
+                to="/about" 
+                className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300" 
+                onClick={() => handleSmoothScroll()}
+              >
                 About Me
-              </a>
-              <a href="/portfolio" className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">
+              </Link>
+              <Link
+                to="/portfolio" 
+                className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300" 
+                onClick={() => handleSmoothScroll()}
+              >
                 Portfolio
-              </a>
-              <a href="/contact" className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">
+              </Link>
+              <Link 
+                to="/contact"
+                className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
+                onClick={() => handleSmoothScroll()}
+              >
                 Contact
-              </a>
-              <a href="/resume" className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">
+              </Link>
+              <Link
+                to="/resume"
+                className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
+                onClick={() => handleSmoothScroll()}
+              >
                 Resume
-              </a>
+              </Link>
             </div>
           </div>
 
-          {/* Social Links */}
           <div className="text-center md:text-right">
             <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
               Connect With Me
@@ -46,7 +61,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-accent-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0">

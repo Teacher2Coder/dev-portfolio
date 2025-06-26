@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { Download, ExternalLink, Calendar, MapPin } from 'lucide-react'
 import SkillsTable from '../components/SkillsTable'
 import experience from '../data/experience.json'
+import handleSmoothScroll from '../utils/handleSmoothScroll'
 
 const Resume = () => {
   
@@ -74,13 +76,14 @@ const Resume = () => {
               <Download className="w-5 h-5" />
               Download PDF
             </a>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="btn-secondary inline-flex items-center gap-2"
+              onClick={() => handleSmoothScroll()}
             >
               <ExternalLink className="w-5 h-5" />
               Contact Me
-            </a>
+            </Link>
           </div>
         </motion.div>
 
@@ -229,12 +232,13 @@ const Resume = () => {
               <p className="mb-4 opacity-90">
                 I'm always open to discussing new opportunities and interesting projects.
               </p>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="bg-white text-primary-600 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300 inline-block"
+                onClick={() => handleSmoothScroll()}
               >
                 Get In Touch
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

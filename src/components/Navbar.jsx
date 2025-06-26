@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import handleSmoothScroll from '../utils/handleSmoothScroll'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -41,7 +42,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto container-padding">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
+          <Link to="/" className="flex items-center space-x-2 group" onClick={() => handleSmoothScroll()}>
             <div className="p-2 bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg transform group-hover:scale-105 transition-transform duration-300">
               <img src='/logo.svg' alt="Ethan Owens" className="w-6 h-6" />
             </div>
@@ -59,6 +60,7 @@ const Navbar = () => {
                     ? 'text-primary-600 dark:text-primary-400'
                     : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
                 }`}
+                onClick={() => handleSmoothScroll()}
               >
                 {item.label}
                 {location.pathname === item.path && (
@@ -106,6 +108,7 @@ const Navbar = () => {
                           ? 'bg-primary-50 text-primary-600 dark:bg-primary-900/20 dark:text-primary-400'
                           : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
                       }`}
+                      onClick={() => handleSmoothScroll()}
                     >
                       {item.label}
                     </Link>

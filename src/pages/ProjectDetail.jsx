@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Github, ExternalLink, Code, Tag, CheckCircle, Clock } from 'lucide-react'
 import projectsData from '../data/projects.json'
+import handleSmoothScroll from '../utils/handleSmoothScroll'
 
 const ProjectDetail = () => {
   const { name } = useParams()
@@ -61,6 +62,7 @@ const ProjectDetail = () => {
           <Link
             to="/portfolio"
             className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 transition-colors duration-300"
+            onClick={() => handleSmoothScroll()}
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Portfolio
@@ -223,6 +225,7 @@ const ProjectDetail = () => {
                       key={relatedProject.id}
                       to={`/project/${relatedProject.name}`}
                       className="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors duration-300"
+                      onClick={() => handleSmoothScroll()}
                     >
                       <div className="font-medium text-gray-900 dark:text-gray-100 text-sm">
                         {relatedProject.title}
@@ -247,6 +250,7 @@ const ProjectDetail = () => {
           <Link
             to="/portfolio"
             className="btn-secondary inline-flex items-center gap-2"
+            onClick={() => handleSmoothScroll()}
           >
             <ArrowLeft className="w-5 h-5" />
             Back to Portfolio
@@ -255,6 +259,7 @@ const ProjectDetail = () => {
           <Link
             to="/contact"
             className="btn-primary inline-flex items-center gap-2"
+            onClick={() => handleSmoothScroll()}
           >
             Interested? Let's Talk
             <ExternalLink className="w-5 h-5" />

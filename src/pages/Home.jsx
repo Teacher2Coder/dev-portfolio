@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Download, Github, ExternalLink, Eye } from 'lucide-react'
 import projectsData from '../data/projects.json'
+import handleSmoothScroll from '../utils/handleSmoothScroll'
 
 const Home = () => {
   const featuredProjects = projectsData.filter(project => project.featured).slice(0, 3)
@@ -44,7 +45,7 @@ const Home = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <span className="bg-gradient-to-r from-primary-200 to-primary-300 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">
-                  👋 Welcome to my portfolio
+                  👋🏻 Welcome to my portfolio
                 </span>
               </motion.div>
               
@@ -67,7 +68,7 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link to="/portfolio" className="btn-primary inline-flex items-center gap-2">
+                <Link to="/portfolio" className="btn-primary inline-flex items-center gap-2" onClick={() => handleSmoothScroll()}>
                   View My Work
                   <ArrowRight className="w-5 h-5" />
                 </Link>
@@ -225,7 +226,10 @@ const Home = () => {
                 </div>
                 
                 <div className="p-6">
-                  <Link to={`/project/${project.id}`}>
+                  <Link 
+                    to={`/project/${project.name}`}
+                    onClick={() => handleSmoothScroll()}
+                  >
                     <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300 cursor-pointer">
                       {project.title}
                     </h3>
@@ -255,6 +259,7 @@ const Home = () => {
                     <Link
                       to={`/project/${project.name}`}
                       className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
+                      onClick={() => handleSmoothScroll()}
                     >
                       <Eye className="w-4 h-4" />
                       Details
@@ -286,7 +291,11 @@ const Home = () => {
           </div>
 
           <motion.div variants={itemVariants} className="text-center mt-12">
-            <Link to="/portfolio" className="btn-primary inline-flex items-center gap-2">
+            <Link 
+              to="/portfolio"
+              className="btn-primary inline-flex items-center gap-2" 
+              onClick={() => handleSmoothScroll()}
+            >
               View All Projects
               <ArrowRight className="w-5 h-5" />
             </Link>
@@ -304,7 +313,11 @@ const Home = () => {
             <p className="text-xl text-primary-100 mb-8">
               I'm always excited to work on new projects and collaborate with passionate teams
             </p>
-            <Link to="/contact" className="bg-white text-primary-600 font-medium py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-300 inline-flex items-center gap-2">
+            <Link
+              to="/contact"
+              className="bg-white text-primary-600 font-medium py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-300 inline-flex items-center gap-2"
+              onClick={() => handleSmoothScroll()}
+            >
               Get In Touch
               <ArrowRight className="w-5 h-5" />
             </Link>

@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion'
-import { Code, Server, Database, Globe, Brain, Users } from 'lucide-react'
+import { Code, Brain, Users } from 'lucide-react'
 import SkillsTable from '../components/SkillsTable'
 import experience from '../data/experience.json'
 
 const About = () => {
   
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -34,7 +33,6 @@ const About = () => {
       exit="hidden"
       className="min-h-screen"
     >
-      {/* Hero Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -85,7 +83,7 @@ const About = () => {
               <div className="aspect-square max-w-md mx-auto">
                 <div className="w-full h-full bg-gradient-to-br from-primary-400 to-accent-400 rounded-2xl p-8 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <div className="text-6xl mb-4">👨‍💻</div>
+                    <div className="text-6xl mb-4">🧑🏼‍💻</div>
                     <h3 className="text-xl font-semibold">Always Learning</h3>
                     <p className="mt-2 opacity-90">Passionate about technology and innovation</p>
                   </div>
@@ -112,7 +110,6 @@ const About = () => {
       </div>
     </section>
 
-      {/* Experience Timeline */}
       <section className="section-padding">
         <div className="max-w-4xl mx-auto container-padding">
           <motion.div variants={itemVariants} className="text-center mb-16">
@@ -125,7 +122,6 @@ const About = () => {
           </motion.div>
 
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-400 to-accent-400"></div>
 
             <div className="space-y-12">
@@ -135,7 +131,6 @@ const About = () => {
                   variants={itemVariants}
                   className="relative flex items-start"
                 >
-                  {/* Timeline dot */}
                   <div className="absolute left-6 w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-gray-900 z-10"></div>
                   
                   <div className="ml-20">
@@ -166,7 +161,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Personal Interests */}
       <section className="section-padding bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto container-padding">
           <motion.div variants={itemVariants} className="text-center mb-16">
