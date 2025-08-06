@@ -1,7 +1,21 @@
 [
   {
     "id": 1,
-    "title": "Vitemaker",
+    "title": "Walker Texas Services",
+    "name": "walker-texas-services",
+    "description": "This webpage was made for Walker Texas Services, LLC. The site displays important information about the business, including a list of services offered, a brief about us page, and a contact form.",
+    "longDescription": "Walker Texas Services, LLC is a full-service landscaping and lawn care company that provides a wide range of services to residential and commercial clients. The website features a clean, professional design with a focus on showcasing the company's services and capabilities. The site includes a home page with a clear call to action, a services page with detailed descriptions of each service, an about us page with information about the company's history and mission, and a contact page with a form for potential clients to get in touch. The website is built with React and Tailwind CSS, and is hosted on a cloud-based platform. The site is optimized for search engines and is designed to be responsive, ensuring that it looks great on all devices.",
+    "image": "/projects/wts.png",
+    "technologies": ["React", "Tailwind CSS", "Framer Motion", "Form Submit"],
+    "githubUrl": "https://github.com/Teacher2Coder/walkertxservices",
+    "liveUrl": "https://walker-txservices.com",
+    "featured": true,
+    "category": "Static Website",
+    "status": "Completed"
+  },
+  {
+    "id": 3,
+    "title": "Vitemaker", 
     "name": "vitemaker",
     "description": "This CLI tool enables React developers to quickly create a client side application using React, Vite, Tailwind CSS and other common packages!",
     "longDescription": "Vitemaker is a comprehensive CLI tool that empowers developers to quickly scaffold React applications with Vite, Tailwind CSS, and other essential packages. Sure there are other tools out there that do this, but I wanted to create my own to steamline the process for creating React applications the way that I like to do it. The tool streamlines the setup process by generating a fully functional React project with optimized configurations for modern web development. Key features include automatic installation of dependencies, creation of project structure, and configuration of build tools for seamless deployment. The application includes a user-friendly command-line interface that guides users through the setup process, providing helpful prompts and error handling for a smooth development experience. The tool supports customization of project settings, including theme selection, component organization, and styling options. The generated project is optimized for performance, accessibility, and maintainability, making it an ideal starting point for new React applications.",
@@ -14,7 +28,7 @@
     "status": "Completed"
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "EduTracker",
     "name": "edutracker",
     "description": "This app allows teachers and students to track their progress in a course by creating and sharing assignments, quizzes, and other learning materials.",
@@ -23,12 +37,12 @@
     "technologies": ["PostgreSQL", "Express", "React", "Node.js", "Chakra UI"],
     "githubUrl": "https://github.com/Teacher2Coder/edtracker",
     "liveUrl": null,
-    "featured": true,
+    "featured": false,
     "category": "Web App",
     "status": "In Progress"
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "Gamer-Bud",
     "name": "gamer-bud",
     "description": "This app allows gamers to find new friends to play various video games accross various platforms!",
@@ -42,7 +56,7 @@
     "status": "Completed"
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "DMs & DMs",
     "name": "dms-and-dms",
     "description": "This app allows users to create and share ideas for characters, stories, rules and quests with other Dungeon Masters around the world!",
@@ -56,7 +70,7 @@
     "status": "Completed"
   },
   {
-    "id": 5,
+    "id": 7,
     "title": "CMS Style Blog",
     "name": "cms-blog",
     "description": "This application allows users to create, edit and delete their own blog posts while also reading other blog posts written by other users!",
@@ -70,7 +84,7 @@
     "status": "Completed"
   },
   {
-    "id": 6,
+    "id": 8,
     "title": "Marvel Movie Database",
     "name": "marvel-movie-database",
     "description": "This app allows users to see information about the Marvel Movies, store their favorite movies in a list and watch trailers!",
@@ -84,7 +98,7 @@
     "status": "Completed"
   },
   {
-    "id": 7,
+    "id": 9,
     "title": "E-Commerce API",
     "name": "e-commerce-api",
     "description": "This app is the back end for a potential E-Commerce website, allowing a database to create, read, update and delete product information.",
@@ -98,7 +112,7 @@
     "status": "Completed"
   },
   {
-    "id": 8,
+    "id": 10,
     "title": "Note Taker",
     "name": "note-taker",
     "description": "This app allows users to create, save and delete notes!",
@@ -112,7 +126,7 @@
     "status": "Completed"
   },
   {
-    "id": 9,
+    "id": 11,
     "title": "SVG Logo Generator",
     "name": "svg-logo-generator",
     "description": "This app allows users to create simple logos in a .svg file by answering a few questions in the command line!",
@@ -126,7 +140,7 @@
     "status": "Completed"
   },
   {
-    "id": 10,
+    "id": 12,
     "title": "Social Media API",
     "name": "social-media-api",
     "description": "This app is the backend for a potential Social Media Website. It utilizes MongoDB and allows users to create, read, update and delete information!",
@@ -140,7 +154,7 @@
     "status": "Completed"
   },
   {
-    "id": 11,
+    "id": 13,
     "title": "README.md Generator",
     "name": "readme-generator",
     "description": "This app allows a user to create a README.md file with relative ease by just answering a few questions in the command line!",
@@ -154,7 +168,7 @@
     "status": "Completed"
   },
   {
-    "id": 12,
+    "id": 14,
     "title": "README.md Generator in C#",
     "name": "readme-generator-cs",
     "description": "This app allows a user to create a README.md file with relative ease by just answering a few questions in the command line! This was a refactoring of the original README.md Generator in JavaScript in C# using the .NET Framework.",
@@ -168,7 +182,7 @@
     "status": "Completed"
   },
   {
-    "id": 13,
+    "id": 15,
     "title": "Weather Tracker",
     "name": "weather-tracker",
     "description": "This app allows users to get weather data for any city that a user decides to search for from a third party API!",
