@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Github, ExternalLink, Filter, Eye } from 'lucide-react'
 import projectsData from '../data/projects.json'
 import handleSmoothScroll from '../utils/handleSmoothScroll'
+import usePageSEO from '../utils/usePageSEO'
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('All')
@@ -19,6 +20,15 @@ const Portfolio = () => {
       setFilteredProjects(projectsData.filter(project => project.category === category))
     }
   }
+
+  usePageSEO({
+    title: "Portfolio - Ethan Owens",
+    description: "View Ethan Owens' portfolio, showcasing his skills and projects as a full-stack developer.",
+    ogTitle: "Portfolio - Ethan Owens",
+    ogDescription: "View Ethan Owens' portfolio, showcasing his skills and projects as a full-stack developer.",
+    twitterTitle: "Portfolio - Ethan Owens",
+    twitterDescription: "View Ethan Owens' portfolio, showcasing his skills and projects as a full-stack developer.",
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },

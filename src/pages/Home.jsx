@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Download, Github, ExternalLink, Eye } from 'lucide-react'
 import projectsData from '../data/projects.json'
 import handleSmoothScroll from '../utils/handleSmoothScroll'
+import usePageSEO from '../utils/usePageSEO'
 
 const Home = () => {
   const featuredProjects = projectsData.filter(project => project.featured).slice(0, 3)
@@ -11,7 +12,7 @@ const Home = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
+      transition: { 
         duration: 0.6,
         staggerChildren: 0.2
       }
@@ -27,6 +28,15 @@ const Home = () => {
     }
   }
 
+  usePageSEO({
+    title: "Ethan Owens - Software Engineer",
+    description: "Welcome to Ethan Owens' portfolio, showcasing his skills and projects as a full-stack developer.",
+    ogTitle: "Ethan Owens - Software Engineer",
+    ogDescription: "Welcome to Ethan Owens' portfolio, showcasing his skills and projects as a full-stack developer.",
+    twitterTitle: "Ethan Owens - Software Engineer",
+    twitterDescription: "Welcome to Ethan Owens' portfolio, showcasing his skills and projects as a full-stack developer.",
+  });
+  
   return (
     <motion.div
       variants={containerVariants}

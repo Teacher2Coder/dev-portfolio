@@ -4,9 +4,19 @@ import { Download, ExternalLink, Calendar, MapPin } from 'lucide-react'
 import SkillsTable from '../components/SkillsTable'
 import experience from '../data/experience.json'
 import handleSmoothScroll from '../utils/handleSmoothScroll'
+import usePageSEO from '../utils/usePageSEO'
 
 const Resume = () => {
   
+  usePageSEO({
+    title: "Resume - Ethan Owens",
+    description: "View Ethan Owens' resume, showcasing his skills and experience as a full-stack developer.",
+    ogTitle: "Resume - Ethan Owens",
+    ogDescription: "View Ethan Owens' resume, showcasing his skills and experience as a full-stack developer.",
+    twitterTitle: "Resume - Ethan Owens",
+    twitterDescription: "View Ethan Owens' resume, showcasing his skills and experience as a full-stack developer.",
+  });
+
   const education = [
     {
       degree: 'Bachelor of Science in Exercise Physiology',

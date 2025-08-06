@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import ContactIcons from '../components/ContactIcons'
 import ContactForm from '../components/ContactForm'
+import usePageSEO from '../utils/usePageSEO'
 
 const Contact = () => {
   const containerVariants = {
@@ -23,6 +24,15 @@ const Contact = () => {
     }
   }
 
+  usePageSEO({
+    title: "Contact Me - Ethan Owens",
+    description: "Get in touch with Ethan Owens, a full-stack developer with a passion for building scalable, user-friendly applications.",
+    ogTitle: "Contact Me - Ethan Owens",
+    ogDescription: "Get in touch with Ethan Owens, a full-stack developer with a passion for building scalable, user-friendly applications.",
+    twitterTitle: "Contact Me - Ethan Owens",
+    twitterDescription: "Get in touch with Ethan Owens, a full-stack developer with a passion for building scalable, user-friendly applications.",
+  });
+  
   return (
     <motion.div
       variants={containerVariants}

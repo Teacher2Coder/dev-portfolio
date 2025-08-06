@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Code, Brain, Users } from 'lucide-react'
 import SkillsTable from '../components/SkillsTable'
+import usePageSEO from '../utils/usePageSEO'
 import experience from '../data/experience.json'
 
 const About = () => {
@@ -24,6 +25,15 @@ const About = () => {
       transition: { duration: 0.6 }
     }
   }
+
+  usePageSEO({
+    title: "About Me - Ethan Owens",
+    description: "Learn more about Ethan Owens, a full-stack developer with a passion for building scalable, user-friendly applications.",
+    ogTitle: "About Me - Ethan Owens",
+    ogDescription: "Learn more about Ethan Owens, a full-stack developer with a passion for building scalable, user-friendly applications.",
+    twitterTitle: "About Me - Ethan Owens",
+    twitterDescription: "Learn more about Ethan Owens, a full-stack developer with a passion for building scalable, user-friendly applications.",
+  });
 
   return (
     <motion.div
