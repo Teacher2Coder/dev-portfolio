@@ -1,5 +1,19 @@
 [
   {
+    "id": 0,
+    "title": "Warehouse Management System",
+    "name": "warehouse-management-system",
+    "description": "This is a warehouse management system that allows users to manage their inventory, orders, and customers.",
+    "longDescription": "This is a warehouse management system that allows users to manage their inventory, orders, and customers. Built with React, Tailwind CSS, and Framer Motion in the front-end and C#, .NET, and Entity Framework in the back-end, this application provides a user-friendly interface for managing warehouse operations. The system includes features for tracking inventory levels, processing orders, and managing customer relationships. The application is designed to be responsive and easy to use, with a focus on providing a seamless experience for warehouse staff and managers.",
+    "image": "/projects/wms.png",
+    "technologies": ["React", "Tailwind CSS", "C#", "Entity Framework", ".NET", "PostgreSQL"],
+    "githubUrl": "https://github.com/Teacher2Coder/wms",
+    "liveUrl": null,
+    "featured": true,
+    "category": "Web App",
+    "status": "In Progress"
+  },
+  {
     "id": 1,
     "title": "Walker Texas Services",
     "name": "walker-texas-services",
@@ -23,7 +37,7 @@
     "technologies": ["C#", ".NET Framework", "CLI"],
     "githubUrl": "https://github.com/Teacher2Coder/vitemaker",
     "liveUrl": null,
-    "featured": true,
+    "featured": false,
     "category": "CLI Tool",
     "status": "Completed"
   },
