@@ -75,7 +75,7 @@ const About = () => {
 
               <div className="mt-8 grid grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">20+</div>
+                  <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">25+</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
                 </div>
                 <div className="text-center">

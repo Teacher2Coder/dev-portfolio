@@ -266,6 +266,7 @@ const Portfolio = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
+                onClick={() => handleSmoothScroll()}
                 href="/contact"
                 className="btn-primary inline-flex items-center gap-2"
               >
