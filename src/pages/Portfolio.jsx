@@ -265,13 +265,13 @@ const Portfolio = () => {
               Let's create something amazing together!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 onClick={() => handleSmoothScroll()}
-                href="/contact"
+                to="/contact"
                 className="btn-primary inline-flex items-center gap-2"
               >
                 Get In Touch
-              </a>
+              </Link>
               <a
                 href="https://github.com/Teacher2Coder"
                 target="_blank"
