@@ -116,7 +116,7 @@ const Portfolio = () => {
           >
             {filteredProjects.map((project) => (
               <motion.div
-                key={project.id}
+                key={project.name}
                 variants={projectVariants}
                 layout
                 className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover"

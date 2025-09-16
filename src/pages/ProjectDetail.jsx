@@ -243,11 +243,11 @@ const ProjectDetail = () => {
               </h3>
               <div className="space-y-3">
                 {projectsData
-                  .filter(p => p.id !== project.id && p.category === project.category)
+                  .filter(p => p.name !== project.name && p.category === project.category)
                   .slice(0, 3)
                   .map((relatedProject) => (
                     <Link
-                      key={relatedProject.id}
+                      key={relatedProject.name}
                       to={`/project/${relatedProject.name}`}
                       className="block p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors duration-300"
                       onClick={() => handleSmoothScroll()}
@@ -260,7 +260,7 @@ const ProjectDetail = () => {
                       </div>
                     </Link>
                   ))}
-                {projectsData.filter(p => p.id !== project.id && p.category === project.category).length === 0 && (
+                {projectsData.filter(p => p.name !== project.name && p.category === project.category).length === 0 && (
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     No related projects found.
                   </p>

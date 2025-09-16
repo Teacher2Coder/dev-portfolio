@@ -1,12 +1,11 @@
 [
   {
-    "id": 0,
     "title": "Warehouse Management System",
     "name": "warehouse-management-system",
     "description": "This is a warehouse management system that allows users to manage their inventory, orders, and customers.",
     "longDescription": "This is a warehouse management system that allows users to manage their inventory, orders, and customers. Built with React, Tailwind CSS, and Framer Motion in the front-end and C#, .NET, and Entity Framework in the back-end, this application provides a user-friendly interface for managing warehouse operations. The system includes features for tracking inventory levels, processing orders, and managing customer relationships. The application is designed to be responsive and easy to use, with a focus on providing a seamless experience for warehouse staff and managers.",
     "image": "/projects/wms.png",
-    "technologies": ["React", "Tailwind CSS", "C#", "Entity Framework", ".NET", "PostgreSQL"],
+    "technologies": ["React", "Tailwind CSS", "C#", "Entity Framework", ".NET", "PostgreSQL", "Framer Motion", "BCrypt"],
     "githubUrl": "https://github.com/Teacher2Coder/wms",
     "liveUrl": null,
     "featured": true,
@@ -14,7 +13,6 @@
     "status": "In Progress"
   },
   {
-    "id": 1,
     "title": "Walker Texas Services",
     "name": "walker-texas-services",
     "description": "This webpage was made for Walker Texas Services, LLC. The site displays important information about the business, including a list of services offered, a brief about us page, and a contact form.",
@@ -28,7 +26,6 @@
     "status": "Completed"
   },
   {
-    "id": 3,
     "title": "Vitemaker", 
     "name": "vitemaker",
     "description": "This CLI tool enables React developers to quickly create a client side application using React, Vite, Tailwind CSS and other common packages!",
@@ -42,7 +39,6 @@
     "status": "Completed"
   },
   {
-    "id": 4,
     "title": "EduTracker",
     "name": "edutracker",
     "description": "This app allows teachers and students to track their progress in a course by creating and sharing assignments, quizzes, and other learning materials.",
@@ -56,7 +52,6 @@
     "status": "In Progress"
   },
   {
-    "id": 5,
     "title": "Gamer-Bud",
     "name": "gamer-bud",
     "description": "This app allows gamers to find new friends to play various video games accross various platforms!",
@@ -70,7 +65,6 @@
     "status": "Completed"
   },
   {
-    "id": 6,
     "title": "DMs & DMs",
     "name": "dms-and-dms",
     "description": "This app allows users to create and share ideas for characters, stories, rules and quests with other Dungeon Masters around the world!",
@@ -84,7 +78,6 @@
     "status": "Completed"
   },
   {
-    "id": 7,
     "title": "CMS Style Blog",
     "name": "cms-blog",
     "description": "This application allows users to create, edit and delete their own blog posts while also reading other blog posts written by other users!",
@@ -98,7 +91,6 @@
     "status": "Completed"
   },
   {
-    "id": 8,
     "title": "Marvel Movie Database",
     "name": "marvel-movie-database",
     "description": "This app allows users to see information about the Marvel Movies, store their favorite movies in a list and watch trailers!",
@@ -112,7 +104,6 @@
     "status": "Completed"
   },
   {
-    "id": 9,
     "title": "E-Commerce API",
     "name": "e-commerce-api",
     "description": "This app is the back end for a potential E-Commerce website, allowing a database to create, read, update and delete product information.",
@@ -126,7 +117,6 @@
     "status": "Completed"
   },
   {
-    "id": 10,
     "title": "Note Taker",
     "name": "note-taker",
     "description": "This app allows users to create, save and delete notes!",
@@ -140,7 +130,6 @@
     "status": "Completed"
   },
   {
-    "id": 11,
     "title": "SVG Logo Generator",
     "name": "svg-logo-generator",
     "description": "This app allows users to create simple logos in a .svg file by answering a few questions in the command line!",
@@ -154,7 +143,6 @@
     "status": "Completed"
   },
   {
-    "id": 12,
     "title": "Social Media API",
     "name": "social-media-api",
     "description": "This app is the backend for a potential Social Media Website. It utilizes MongoDB and allows users to create, read, update and delete information!",
@@ -168,7 +156,6 @@
     "status": "Completed"
   },
   {
-    "id": 13,
     "title": "README.md Generator",
     "name": "readme-generator",
     "description": "This app allows a user to create a README.md file with relative ease by just answering a few questions in the command line!",
@@ -182,7 +169,6 @@
     "status": "Completed"
   },
   {
-    "id": 14,
     "title": "README.md Generator in C#",
     "name": "readme-generator-cs",
     "description": "This app allows a user to create a README.md file with relative ease by just answering a few questions in the command line! This was a refactoring of the original README.md Generator in JavaScript in C# using the .NET Framework.",
@@ -196,7 +182,6 @@
     "status": "Completed"
   },
   {
-    "id": 15,
     "title": "Weather Tracker",
     "name": "weather-tracker",
     "description": "This app allows users to get weather data for any city that a user decides to search for from a third party API!",

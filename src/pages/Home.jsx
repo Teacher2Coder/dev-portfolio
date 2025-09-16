@@ -214,7 +214,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
               <motion.div
-                key={project.id}
+                key={project.name}
                 variants={itemVariants}
                 whileHover={{ y: -10 }}
                 className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg card-hover"
